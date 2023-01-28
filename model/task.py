@@ -1,5 +1,6 @@
 import os
 import json
+import asyncio
 
 import configs.env
 
@@ -42,7 +43,7 @@ class Task:
             ]
         }
         
-    def log_state(self, session: OAuth2Session = None,
+    async def log_state(self, session: OAuth2Session = None,
                   sheets_url = None, log_location = 'sheets'):
     
         if log_location=='sheets':

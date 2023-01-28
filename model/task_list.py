@@ -1,5 +1,6 @@
 import os
 import json
+import asyncio
 
 from dataclasses import dataclass
 from typing import List
@@ -18,7 +19,7 @@ class TaskList:
         self.updated = list_item.get('updated')
         self.selfLink = list_item.get('selfLink')
         
-    def get_tasks(self, session: OAuth2Session, tasks_url):
+    async def get_tasks(self, session: OAuth2Session, tasks_url):
         request_url = tasks_url + 'lists/' + self.id + '/tasks?showCompleted=True&showHidden=True'
                 
         tasks_response = session.get(request_url)
