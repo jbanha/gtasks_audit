@@ -14,3 +14,5 @@
 - [ ] Setup cleanup scripts
 - [ ] Setup remote version of deploying and cleaning
 - [ ] Expose home hub publically and setup security (2FA)
+
+# Additional needed files
